@@ -15,6 +15,10 @@
     <div class="col-6"><a href="https://grafana.com/orgs/eljah/dashboards">Grafana</a></div>
     <div class="col-6"><a href="https://habr.com/ru/users/Eljah/">Habr</a></div>
  </div>
+ <div class="row align-items-stretch b-height container-fluid">
+     <div class="col-6"><a href="http://eljah.tatar/vpn/">VPN</a></div>
+     <div class="col-6"><a href="http://eljah.tatar/micrometer2grafana/">Micrometer2grafana</a></div>
+  </div>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
