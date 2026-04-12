@@ -1,0 +1,72 @@
+name: Build bio.war
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Build WAR
+        run: mvn -B clean package
+
+      - name: Remove previous bio-war artifacts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const artifactName = 'bio-war';
+            let page = 1;
+            while (true) {
+              const { data } = await github.rest.actions.listArtifactsForRepo({
+                owner,
+                repo,
+                per_page: 100,
+                page
+              });
+
+              if (!data.artifacts.length) {
+                break;
+              }
+
+              for (const artifact of data.artifacts) {
+                if (artifact.name === artifactName) {
+                  core.info(`Deleting artifact ${artifact.id} (${artifact.name})`);
+                  await github.rest.actions.deleteArtifact({
+                    owner,
+                    repo,
+                    artifact_id: artifact.id
+                  });
+                }
+              }
+
+              if (data.artifacts.length < 100) {
+                break;
+              }
+              page++;
+            }
+
+      - name: Upload bio.war
+        uses: actions/upload-artifact@v4
+        with:
+          name: bio-war
+          path: target/bio.war
+          retention-days: 1
