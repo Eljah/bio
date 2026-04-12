@@ -64,7 +64,6 @@
 </head>
 <body>
 <div class="container page-wrap py-4 py-md-5">
-  <a class="btn btn-outline-primary btn-sm mb-3" href="index.jsp">← На главную</a>
   <article class="article-card">
     <h1 class="h2 mb-4">Туфан Миңнулин</h1>
 
