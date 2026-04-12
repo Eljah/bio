@@ -35,34 +35,28 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const artifactName = 'bio-war';
-            let page = 1;
+
             while (true) {
               const { data } = await github.rest.actions.listArtifactsForRepo({
                 owner,
                 repo,
                 per_page: 100,
-                page
+                page: 1
               });
 
-              if (!data.artifacts.length) {
+              const matches = data.artifacts.filter((artifact) => artifact.name === artifactName);
+              if (!matches.length) {
                 break;
               }
 
-              for (const artifact of data.artifacts) {
-                if (artifact.name === artifactName) {
-                  core.info(`Deleting artifact ${artifact.id} (${artifact.name})`);
-                  await github.rest.actions.deleteArtifact({
-                    owner,
-                    repo,
-                    artifact_id: artifact.id
-                  });
-                }
+              for (const artifact of matches) {
+                core.info(`Deleting artifact ${artifact.id} (${artifact.name})`);
+                await github.rest.actions.deleteArtifact({
+                  owner,
+                  repo,
+                  artifact_id: artifact.id
+                });
               }
-
-              if (data.artifacts.length < 100) {
-                break;
-              }
-              page++;
             }
 
       - name: Upload bio.war
