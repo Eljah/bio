@@ -75,7 +75,12 @@
 <div class="container page-wrap py-4 py-md-5">
   <article class="article-card">
     <h1 class="h2 mb-4">Туфан Миңнулин</h1>
-    <img class="lead-image" src="TufanMinnullin.jpg" alt="Туфан Миңнуллин">
+    <a href="https://ltdfoto.ru/image/xQBblL" target="_blank" rel="noopener noreferrer">
+      <img class="lead-image"
+           src="https://ltdfoto.ru/images/2026/04/13/TufanMinnullin.jpg"
+           alt="Туфан Миңнуллин"
+           onerror="this.onerror=null;this.src='TufanMinnullin.jpg';">
+    </a>
     <p>Туфан Миңнуллин – талантлы кеше. Булдыклы, тырыш, үҗәт, эшчән. Кырыклап пьесса, проза әсәрләре авторы. Милләт горурлыгы кем, дигәндә, әлбәттә, аның исеме беренчеләрдән аталырга хаклы. Туфан Миңнуллин – җир кешесе, чын тормышны сурәтли, ихлас яза, зарланмый-сыкранмый, заманны үзенчә ача. Ул – язучы, ул – зур шәхес. Ә олы шәхесләр һәрчак үз халкы, татар язмышы хакында борчылып уйлана. Туфан Миңнуллин кемнәрнедер яклаудан тәм тапкан.</p>
 
     <h2 class="h4 mt-4">Белешмә</h2>
