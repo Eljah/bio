@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Туфан Миңнулин</title>
+  <link rel="preload" as="image" href="TufanMinnullin.jpg">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
     body {
@@ -75,7 +76,14 @@
 <div class="container page-wrap py-4 py-md-5">
   <article class="article-card">
     <h1 class="h2 mb-4">Туфан Миңнулин</h1>
-    <img class="lead-image" src="TufanMinnullin.jpg" alt="Туфан Миңнуллин">
+    <img class="lead-image"
+         src="TufanMinnullin.jpg"
+         alt="Туфан Миңнуллин"
+         width="666"
+         height="945"
+         loading="eager"
+         decoding="async"
+         fetchpriority="high">
     <p>Туфан Миңнуллин – талантлы кеше. Булдыклы, тырыш, үҗәт, эшчән. Кырыклап пьесса, проза әсәрләре авторы. Милләт горурлыгы кем, дигәндә, әлбәттә, аның исеме беренчеләрдән аталырга хаклы. Туфан Миңнуллин – җир кешесе, чын тормышны сурәтли, ихлас яза, зарланмый-сыкранмый, заманны үзенчә ача. Ул – язучы, ул – зур шәхес. Ә олы шәхесләр һәрчак үз халкы, татар язмышы хакында борчылып уйлана. Туфан Миңнуллин кемнәрнедер яклаудан тәм тапкан.</p>
 
     <h2 class="h4 mt-4">Белешмә</h2>
