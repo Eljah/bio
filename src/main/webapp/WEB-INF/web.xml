@@ -4,4 +4,30 @@
 
 <web-app>
   <display-name>App about me</display-name>
+
+  <filter>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <filter-class>org.example.web.StaticAssetCacheFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <url-pattern>*.jpg</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <url-pattern>*.jpeg</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <url-pattern>*.png</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <url-pattern>*.css</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>staticAssetCacheFilter</filter-name>
+    <url-pattern>*.js</url-pattern>
+  </filter-mapping>
 </web-app>
